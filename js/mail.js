@@ -5,11 +5,12 @@ url: 'https://mandrillapp.com/api/1.0/messages/send.json',
 data: {
 'key': 'YNFDoAWm5FEa5d7kANAZsQ',
 'message': {
+'from_name': byName('name').value,
 'from_email': byName('mail').value,
 'to': [
 {
-'email': byName('mailTo').value,
-'name': 'RECIPIENT NAME (OPTIONAL)',
+'name': byName('toName').value,
+'email': byName('toMail').value,
 'type': 'to'
 }
 ],
@@ -20,8 +21,10 @@ data: {
 }
 }).done(function(response) {
 console.log(response);
+setCookie("name", byName("name").value);
 setCookie("mail", byName("mail").value);
-setCookie("mailTo", byName("mailTo").value);
+setCookie("toName", byName("toName").value);
+setCookie("toMail", byName("toMail").value);
 setCookie("subject", byName("subject").value);
 setCookie("body", byName("body").value);
 setCookie("cycleNum", byName("cycleNum").value);
