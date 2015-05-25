@@ -9,17 +9,6 @@
   <script src="js/cookies.js" type="text/javascript"></script>
   <script src="js/mail.js" type="text/javascript"></script>
   <style>
-  #frmDiv{
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    width: 205px;
-    height: 400px;
-    margin-top: -9em; /*set to a negative number 1/2 of your height*/
-    margin-left: -15em; /*set to a negative number 1/2 of your width*/
-    border: 1px solid #cccccc;
-    background-color: #f3f3f3;
-  }
   input{
     width: 200px;
     display: block;
@@ -32,28 +21,26 @@
   }
   </style>
 <body>
-  <div id="frmDiv">
-    <form>
-      <br />Send From Name:<br />
-      <input name="name" type="text" />
-      <br />Send From Mail:<br />
-      <input name="mail" type="text" />
-      <br />Send To Name:<br />
-      <input name="toName" type="text" />
-      <br />Send To Mail:<br />
-      <input name="toMail" type="text" />
-      <br />Subject:<br />
-      <input name="subject" type="text" />
-      <br />Body:<br />
-      <textarea name="body"></textarea>
-      <br />
-      <input type="button" onclick="javascript:sendMail();" value="Send" />
-      <br />Cycle:<br />
-      <input name="cycleNum" type="number" value="1000" />
-      <br />
-      <input name="btnCycleStart" type="button" onclick="javascript:sendMailCycle(true);" value="Cycle Send Start" />
-      <input name="btnCycleStop" type="button" onclick="javascript:sendMailCycle(false);" value="Cycle Send Stop" style="display: none;" />
-    </form>
-  </div>
+  <form>
+    <br />Send From Name:<br />
+    <input name="name" type="text" />
+    <br />Send From Mail:<br />
+    <input name="mail" type="text" />
+    <br />Send To Name:<br />
+    <input name="toName" type="text" />
+    <br />Send To Mail:<br />
+    <input name="toMail" type="text" />
+    <br />Subject:<br />
+    <input name="subject" type="text" />
+    <br />Body:<br />
+    <textarea name="body"></textarea>
+    <br />
+    <input type="button" onclick="javascript:sendMail();" value="Send" />
+    <br />Cycle:<br />
+    <input name="cycleNum" type="number" value="1000" />
+    <br />
+    <input name="btnCycleStart" type="button" onclick="javascript:sendMailCycle(true);" value="Cycle Send Start" />
+    <input name="btnCycleStop" type="button" onclick="javascript:sendMailCycle(false);" value="Cycle Send Stop" style="display: none;" />
+  </form>
 </body>
 </html>
